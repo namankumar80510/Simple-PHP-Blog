@@ -1,5 +1,6 @@
 import m from "mithril";
 import { BlogIndex } from "./BlogIndex.jsx";
+import { BlogPost } from "./BlogPostView.jsx";
 import { About } from "./About.jsx";
 import { Test } from "./Test.jsx";
 
@@ -11,4 +12,5 @@ m.route(mountNode, "/", {
     "/": BlogIndex,
     "/about": About,
     "/test": Test,
+    "/view/:slug": BlogPost
 });

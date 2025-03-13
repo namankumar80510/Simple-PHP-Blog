@@ -29,4 +29,15 @@ class Connection
     {
         return $this->connection->select('*')->from('posts')->orderBy('id DESC')->fetchAll();
     }
+
+    public function getPost(string $slug): array
+    {
+        $post = $this->connection->select('*')->from('posts')->where('slug = ?', $slug)->fetch()->toArray();
+
+        if (empty($post)) {
+            return [];
+        }
+
+        return $post;
+    }
 }

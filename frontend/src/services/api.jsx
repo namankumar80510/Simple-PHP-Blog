@@ -9,5 +9,10 @@ export const ApiService = {
     getPosts: () =>
         fetch(`${API_URL}/posts`)
             .then(res => res.json())
+            .catch(error => ({ error: error.message })),
+
+    getPostBySlug: (slug) =>
+        fetch(`${API_URL}/posts/view/${slug}`)
+            .then(res => res.json())
             .catch(error => ({ error: error.message }))
 };

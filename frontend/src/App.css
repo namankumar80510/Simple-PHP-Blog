@@ -85,6 +85,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Layout */
 .layout {
     max-width: 1140px;
