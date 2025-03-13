@@ -1,0 +1,17 @@
+{
+    "name": "dikki/blog",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php": ">=8.3",
+        "dikki/dotenv": "^2.0",
+        "tracy/tracy": "^2.10"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
