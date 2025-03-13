@@ -24,4 +24,9 @@ class Connection
     {
         return $this->connection;
     }
+
+    public function getPosts(): array
+    {
+        return $this->connection->select('*')->from('posts')->orderBy('id DESC')->fetchAll();
+    }
 }

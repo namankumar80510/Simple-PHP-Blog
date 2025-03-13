@@ -1,6 +1,6 @@
 import m from "mithril";
 import { Layout } from "./views/Layout";
-import { TestService } from "./services/api";
+import { ApiService } from "./services/api";
 
 const TestViews = {
     view: ({ attrs: { data, error } }) => (
@@ -77,7 +77,7 @@ export const Test = {
 
     oninit: async () => {
         try {
-            const result = await TestService.getTest();
+            const result = await ApiService.getTest();
             Test.error = result.error;
             Test.data = result.error ? null : result;
         } catch (err) {

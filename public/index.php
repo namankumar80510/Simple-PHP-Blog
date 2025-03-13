@@ -7,6 +7,7 @@ require __DIR__ . '/../api/vendor/autoload.php';
 
 use App\Libraries\API\ApiResponseStrategy;
 use League\Container\Container;
+use League\Container\ReflectionContainer;
 
 (new DotEnv(__DIR__ . '/../api/'))->load();
 
@@ -27,6 +28,7 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 );
 
 $container = new Container();
+$container->delegate(new ReflectionContainer());
 $router = new League\Route\Router;
 $router->setStrategy(new ApiResponseStrategy(new \Laminas\Diactoros\ResponseFactory())
     ->setContainer($container));
