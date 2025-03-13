@@ -3,14 +3,12 @@ ob_start();
 session_start();
 
 use Dikki\DotEnv\DotEnv;
-use Tracy\Debugger;
-require __DIR__ . '/../vendor/autoload.php';
-new DotEnv(__DIR__ . '/../')->load();
-Debugger::enable(Debugger::DEVELOPMENT, __DIR__ . '/../tmp/log');
+require __DIR__ . '/../../api/vendor/autoload.php';
+new DotEnv(__DIR__ . '/../api')->load();
 
 $dbhost = getenv('DB_HOST');
-$dbuser = getenv('DB_USER');
-$dbpass = getenv('DB_PASS');
+$dbuser = getenv('DB_USERNAME');
+$dbpass = getenv('DB_PASSWORD');
 $dbname = getenv('DB_NAME');
 $charset = "utf8";
 
