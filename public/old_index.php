@@ -45,7 +45,7 @@ if (mysqli_num_rows($result) < 1) {
         $slug = htmlentities($row['slug']);
         $time = htmlentities($row['date']);
 
-        $permalink = "p/" . $id . "/" . $slug;
+        $permalink = "view.php?id=" . $id;
 
         echo '<div class="w3-panel w3-sand w3-card-4">';
         echo "<h3><a href='$permalink'>$title</a></h3><p>";
