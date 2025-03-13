@@ -4,9 +4,9 @@ export const Layout = {
     view: ({ children }) => (
         <div class="layout">
             <nav>
-                <a href="/#/">Home</a>
-                <a href="/#/about">About</a>
-                <a href="/#/test">Test</a>
+                <a href="/blog/">Home</a>
+                <a href="/blog/about">About</a>
+                <a href="/blog/test">Test</a>
             </nav>
             <main>
                 {children}

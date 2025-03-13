@@ -5,7 +5,7 @@ import { Test } from "./Test.jsx";
 
 const mountNode = document.querySelector("#app");
 
-m.route.prefix="#!"; // remove it for default prefix '#!' or change it to something else
+m.route.prefix="/blog/"; // remove it for default prefix '#!' or change it to something else
 
 m.route(mountNode, "/", {
     "/": App,
