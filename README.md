@@ -2,6 +2,8 @@
 
 **NOTE:** I forked this script to try to refactor it.
 
+[New docs will be added here](./docs.md)
+
 Simple blog system for personal development using procedural PHP and MYSQL.
 
 For educational purposes only.
