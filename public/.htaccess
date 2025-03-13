@@ -1,3 +1,0 @@
-RewriteEngine On
-
-RewriteRule ^p/(.*)$ view.php?id=$1 [QSA,L]
