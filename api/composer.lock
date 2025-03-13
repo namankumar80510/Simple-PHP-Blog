@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f810ab300e5349f48943231efcd4249",
+    "content-hash": "84a464cc4e6ba51545c6fdf71f8ee3e9",
     "packages": [
         {
             "name": "dibi/dibi",
@@ -475,6 +475,70 @@
             "time": "2024-11-10T12:42:13+00:00"
         },
         {
+            "name": "league/plates",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/plates.git",
+                "reference": "12ee65166adbc6fb5916fb80b0c0758e49a2d996"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/12ee65166adbc6fb5916fb80b0c0758e49a2d996",
+                "reference": "12ee65166adbc6fb5916fb80b0c0758e49a2d996",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^11.4",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Plates\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "role": "Developer"
+                },
+                {
+                    "name": "RJ Garcia",
+                    "email": "ragboyjr@icloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Plates, the native PHP template system that's fast, easy to use and easy to extend.",
+            "homepage": "https://platesphp.com",
+            "keywords": [
+                "league",
+                "package",
+                "templates",
+                "templating",
+                "views"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/plates/issues",
+                "source": "https://github.com/thephpleague/plates/tree/v3.6.0"
+            },
+            "time": "2024-11-02T15:03:35+00:00"
+        },
+        {
             "name": "league/route",
             "version": "6.2.0",
             "source": {
@@ -563,6 +627,80 @@
                 }
             ],
             "time": "2024-11-25T08:10:15+00:00"
+        },
+        {
+            "name": "nette/caching",
+            "version": "v3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/caching.git",
+                "reference": "b37d2c9647b41a9d04f099f10300dc5496c4eb77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/caching/zipball/b37d2c9647b41a9d04f099f10300dc5496c4eb77",
+                "reference": "b37d2c9647b41a9d04f099f10300dc5496c4eb77",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^4.0",
+                "php": "8.0 - 8.4"
+            },
+            "conflict": {
+                "latte/latte": ">=3.0.0 <3.0.12"
+            },
+            "require-dev": {
+                "latte/latte": "^2.11 || ^3.0.12",
+                "nette/di": "^3.1 || ^4.0",
+                "nette/tester": "^2.4",
+                "phpstan/phpstan": "^1.0",
+                "psr/simple-cache": "^2.0 || ^3.0",
+                "tracy/tracy": "^2.9"
+            },
+            "suggest": {
+                "ext-pdo_sqlite": "to use SQLiteStorage or SQLiteJournal"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "⏱ Nette Caching: library with easy-to-use API and many cache backends.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "cache",
+                "journal",
+                "memcached",
+                "nette",
+                "sqlite"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/caching/issues",
+                "source": "https://github.com/nette/caching/tree/v3.3.1"
+            },
+            "time": "2024-08-07T00:01:58+00:00"
         },
         {
             "name": "nette/neon",
@@ -1742,89 +1880,6 @@
             "time": "2024-11-13T13:31:26+00:00"
         },
         {
-            "name": "symfony/var-dumper",
-            "version": "v7.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "82b478c69745d8878eb60f9a049a4d584996f73a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/82b478c69745d8878eb60f9a049a4d584996f73a",
-                "reference": "82b478c69745d8878eb60f9a049a4d584996f73a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/console": "<6.4"
-            },
-            "require-dev": {
-                "ext-iconv": "*",
-                "symfony/console": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/process": "^6.4|^7.0",
-                "symfony/uid": "^6.4|^7.0",
-                "twig/twig": "^3.12"
-            },
-            "bin": [
-                "Resources/bin/var-dump-server"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "Resources/functions/dump.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Component\\VarDumper\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "debug",
-                "dump"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.2.3"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-01-17T11:39:41+00:00"
-        },
-        {
             "name": "symfony/yaml",
             "version": "v7.0.8",
             "source": {
@@ -1894,81 +1949,6 @@
                 }
             ],
             "time": "2024-05-31T14:55:39+00:00"
-        },
-        {
-            "name": "tracy/tracy",
-            "version": "v2.10.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/tracy.git",
-                "reference": "e7af75205b184ca8895bc57fafd331f8d5022d26"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/e7af75205b184ca8895bc57fafd331f8d5022d26",
-                "reference": "e7af75205b184ca8895bc57fafd331f8d5022d26",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-session": "*",
-                "php": "8.0 - 8.4"
-            },
-            "conflict": {
-                "nette/di": "<3.0"
-            },
-            "require-dev": {
-                "latte/latte": "^2.5 || ^3.0",
-                "nette/di": "^3.0",
-                "nette/http": "^3.0",
-                "nette/mail": "^3.0 || ^4.0",
-                "nette/tester": "^2.2",
-                "nette/utils": "^3.0 || ^4.0",
-                "phpstan/phpstan": "^1.0",
-                "psr/log": "^1.0 || ^2.0 || ^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.10-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/Tracy/functions.php"
-                ],
-                "classmap": [
-                    "src"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "😎  Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
-            "homepage": "https://tracy.nette.org",
-            "keywords": [
-                "Xdebug",
-                "debug",
-                "debugger",
-                "nette",
-                "profiler"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/tracy/issues",
-                "source": "https://github.com/nette/tracy/tree/v2.10.9"
-            },
-            "time": "2024-11-07T14:48:00+00:00"
         }
     ],
     "packages-dev": [

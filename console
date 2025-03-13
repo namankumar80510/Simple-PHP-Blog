@@ -1,13 +1,23 @@
-#!/use/bin/env php
+#!/usr/bin/env php
 <?php
 
 declare(strict_types=1);
+use Nette\Utils\Finder;
 use Symfony\Component\Console\Application;
 
-require_once __DIR__ . "/vendor/autoload.php";
+require_once __DIR__ . '/api/vendor/autoload.php';
 
-$consoleApp = new Application();
+$config = config('app');
+$consoleApp = new Application(
+    $config['name'],
+    $config['version']
+);
 
+$commandFiles = Finder::findFiles('*.php')->from(__DIR__ . '/api/src/Commands');
 
+foreach ($commandFiles as $file) {
+    $commandClass = "\App\\Commands\\" . str_replace('.php', '', $file->getRelativePathname());
+    $consoleApp->add(new $commandClass());
+}
 
 $consoleApp->run();
