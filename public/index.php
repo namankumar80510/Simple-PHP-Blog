@@ -1,15 +1,16 @@
 <?php
 
 declare(strict_types=1);
-use Dikki\DotEnv\DotEnv;
 
-require __DIR__ . '/../api/vendor/autoload.php';
+require __DIR__ . '/../path_constants.php';
+require API_DIR . 'vendor/autoload.php';
 
 use App\Libraries\API\ApiResponseStrategy;
+use Dikki\DotEnv\DotEnv;
 use League\Container\Container;
 use League\Container\ReflectionContainer;
 
-(new DotEnv(__DIR__ . '/../api/'))->load();
+(new DotEnv(API_DIR))->load();
 
 if (getenv('APP_ENV') == 'dev') {
     error_reporting(E_ALL);
