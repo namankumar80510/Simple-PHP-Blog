@@ -73,6 +73,7 @@ export default {
         };
 
         onMounted(() => {
+            document.title = "Blog Index - My Blog";
             fetchPosts();
         });
 

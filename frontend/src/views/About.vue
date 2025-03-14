@@ -31,12 +31,18 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
 import Layout from './Layout.vue';
 
 export default {
     name: 'About',
     components: {
         Layout
+    },
+    setup() {
+        onMounted(() => {
+            document.title = "About Us - My Blog";
+        });
     }
 };
 </script>

@@ -22,7 +22,7 @@ if (isset($_GET['q'])) {
       $slug = htmlentities(strip_tags($row['slug']));
       $time = htmlentities($row['date']);
 
-      $permalink = "blog/view/" . $slug;
+      $permalink = "view/" . $slug;
 
       echo '<div class="w3-panel w3-sand w3-card-4">';
       echo "<h3><a href='$permalink'>$title</a></h3><p>";

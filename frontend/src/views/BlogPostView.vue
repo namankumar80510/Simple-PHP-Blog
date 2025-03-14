@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Layout from './Layout.vue';
 import { ApiService } from '../services/api';
@@ -68,6 +68,13 @@ export default {
 
         onMounted(() => {
             fetchPost();
+        });
+
+        // Watch for post title changes and update document title
+        watch(post, (newPost) => {
+            if (newPost.title) {
+                document.title = `${newPost.title} - My Blog`; // Customize the title format
+            }
         });
 
         return {
