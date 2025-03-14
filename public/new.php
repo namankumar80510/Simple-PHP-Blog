@@ -13,9 +13,9 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO posts (title, description, slug,posted_by, date) VALUES('$title', '$description', '$slug', '$posted_by', '$date')";
     mysqli_query($dbcon, $sql) or die("failed to post" . mysqli_connect_error());
 
-    $permalink = "p/".mysqli_insert_id($dbcon) ."/".$slug;
+    $permalink = "view/".$slug;
 
-    printf("Posted successfully. <meta http-equiv='refresh' content='2; url=%s'/>",
+    printf("Posted successfully. View the post <a href='%s'>here</a>",
        $permalink);
 
 } else {

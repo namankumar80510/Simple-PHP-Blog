@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import BlogIndex from '../views/BlogIndex.vue';
 import BlogPostView from '../views/BlogPostView.vue';
+import SearchResults from '../views/SearchResults.vue';
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/view/:slug',
         name: 'BlogPostView',
         component: BlogPostView
+    },
+    {
+        path: '/search',
+        name: 'SearchResults',
+        component: SearchResults
     },
     {
         path: '/about',

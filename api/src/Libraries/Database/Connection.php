@@ -40,4 +40,9 @@ class Connection
 
         return $post;
     }
+
+    public function searchPosts(string $query): array
+    {
+        return $this->connection->select('*')->from('posts')->where('title LIKE ? OR description LIKE ?', "%{$query}%", "%{$query}%")->fetchAll();
+    }
 }

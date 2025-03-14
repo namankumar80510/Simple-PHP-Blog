@@ -20,19 +20,28 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 export default {
     name: 'Layout',
-    data() {
-        return {
-            searchQuery: ''
-        };
-    },
-    methods: {
-        performSearch() {
-            if (this.searchQuery.trim()) {
-                window.location.href = `/search.php?q=${encodeURIComponent(this.searchQuery)}`;
+    setup() {
+        const searchQuery = ref('');
+        const router = useRouter();
+
+        const performSearch = () => {
+            if (searchQuery.value.trim()) {
+                router.push({
+                    path: '/search',
+                    query: { q: searchQuery.value }
+                });
             }
-        }
+        };
+
+        return {
+            searchQuery,
+            performSearch
+        };
     }
 };
 </script>

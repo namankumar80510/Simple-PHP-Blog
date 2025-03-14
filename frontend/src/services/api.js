@@ -14,5 +14,13 @@ export const ApiService = {
     getPostBySlug: (slug) =>
         fetch(`${API_URL}/posts/view/${slug}`)
             .then(res => res.json())
-            .catch(error => ({ error: error.message }))
+            .catch(error => ({ error: error.message })),
+
+    searchPosts: (query) => {
+        // Use empty string if no query is provided
+        const searchQuery = query || '';
+        return fetch(`${API_URL}/search?q=${encodeURIComponent(searchQuery)}`)
+            .then(res => res.json())
+            .catch(error => ({ error: error.message }));
+    }
 };
