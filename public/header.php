@@ -27,7 +27,7 @@ if (!empty(SITE_ROOT)){
 </header>
 
 <div class="w3-bar w3-border">
-    <a href="/old_index.php" class="w3-bar-item w3-button w3-pale-green">Home</a>
+    <a href="/" class="w3-bar-item w3-button w3-pale-green">Home</a>
     <?php
     if (isset($_SESSION['username'])) {
         echo "<a href='".$url_path ."new.php' class='w3-bar-item w3-btn'>New Post</a>";
