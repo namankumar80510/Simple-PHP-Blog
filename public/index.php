@@ -6,6 +6,8 @@ require __DIR__ . '/../path_constants.php';
 require API_DIR . 'vendor/autoload.php';
 
 use App\Libraries\API\ApiResponseStrategy;
+use App\Middlewares\AuthMiddleware;
+use App\Middlewares\CorsMiddleware;
 use Dikki\DotEnv\DotEnv;
 use League\Container\Container;
 use League\Container\ReflectionContainer;
@@ -33,6 +35,12 @@ $container->delegate(new ReflectionContainer());
 $router = new League\Route\Router;
 $router->setStrategy(new ApiResponseStrategy(new \Laminas\Diactoros\ResponseFactory())
     ->setContainer($container));
+
+// global middlewares
+$router->middlewares([
+    new CorsMiddleware(),
+    new AuthMiddleware(),
+]);
 
 // map a route
 require_once __DIR__ . '/../api/src/routes.php';
