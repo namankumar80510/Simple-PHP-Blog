@@ -1,3 +1,14 @@
+<template>
+    <router-view />
+</template>
+
+<script>
+export default {
+    name: 'App'
+}
+</script>
+
+<style>
 /* Atlassian-inspired Design System */
 :root {
     /* Color palette based on Atlassian Design System */
@@ -584,8 +595,9 @@ footer {
     .search-container form {
         flex-direction: column;
     }
-    
+
     .search-button {
         align-self: flex-start;
     }
 }
+</style>

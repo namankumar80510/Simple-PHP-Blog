@@ -24,7 +24,8 @@ function vite_assets()
         HTML;
     } else {
         echo <<<HTML
-        <script type="module" src="{$config['dev']}"></script>
+        <script type="module" src="{$config['dev']['client']}"></script>
+        <script type="module" src="{$config['dev']['js']}"></script>
         HTML;
     }
 }
