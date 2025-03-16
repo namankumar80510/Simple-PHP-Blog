@@ -15,8 +15,8 @@
                 <div class="about-info-section">
                     <h3>Technologies</h3>
                     <div class="tech-stack">
-                        <span class="lozenge lozenge-new">Mithril</span>
-                        <span class="lozenge lozenge-default">JavaScript</span>
+                        <span class="lozenge lozenge-new">Vue</span>
+                        <span class="lozenge lozenge-default">PHP</span>
                         <span class="lozenge lozenge-default">CSS</span>
                         <span class="lozenge lozenge-default">HTML</span>
                     </div>

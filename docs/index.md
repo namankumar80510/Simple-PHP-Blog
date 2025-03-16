@@ -2,7 +2,7 @@
 
 This is a simple php blog script, a modern refactored fork of the original script <https://github.com/Philipinho/Simple-PHP-Blog>.
 
-This new version offers a better separation of concerns with mithriljs serving the frontend instead of pure php. Nothing wrong with php, but I wanted to learn SPA development with vue and php.
+This new version offers a better separation of concerns with vuejs serving the frontend instead of pure php. Nothing wrong with php, but I wanted to learn SPA development with vue and php.
 
 PHP Serves as a robus backend api and admin panel both. For now, I have retained the original admin panel (may refactor later) and only added read apis and frontend. Even search.php is retained for now.
 
