@@ -17,7 +17,7 @@ if (isset($_POST['log'])) {
 
     if ($row_count == 1 && password_verify($password, $row['password'])) {
         $_SESSION['username'] = $username;
-        header("location: admin.php");
+        header("location: index.php");
     } else {
         echo "<div class='w3-panel w3-pale-red w3-display-container'>Incorrect username or password.</div>";
     }

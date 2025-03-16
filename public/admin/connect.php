@@ -3,8 +3,8 @@ ob_start();
 session_start();
 
 use Dikki\DotEnv\DotEnv;
-require __DIR__ . '/../api/vendor/autoload.php';
-new DotEnv(__DIR__ . '/../api')->load();
+require __DIR__ . '/../../api/vendor/autoload.php';
+new DotEnv(__DIR__ . '/../../api')->load();
 
 $dbhost = getenv('DB_HOST');
 $dbuser = getenv('DB_USERNAME');

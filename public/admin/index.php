@@ -7,7 +7,6 @@ require_once 'security.php';
     <div class="w3-container">
         <p>Welcome <?php echo $_SESSION['username']; ?>,</p>
         <p><a href="new.php" class="w3-button w3-teal">Create new post</a></p>
-        <p><a href="generate_slugs.php" class="w3-button w3-teal">Generate slugs (SEO URLs)</a></p>
 
     </div>
     <h5 class="w3-center">Posts</h5>
@@ -54,12 +53,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     $author = $row['posted_by'];
     $time = $row['date'];
 
-    $permalink = "p/".$id ."/".$slug;
+    $permalink = "/view/".$slug;
     ?>
 
     <tr>
         <td><?php echo $id; ?></td>
-        <td><a href="<?php echo $permalink; ?>"><?php echo substr($title, 0, 50); ?></a></td>
+        <td><a target="_blank" href="<?php echo $permalink; ?>"><?php echo substr($title, 0, 50); ?></a></td>
         <td><?php echo $time; ?></td>
         <td><a href="edit.php?id=<?php echo $id; ?>">Edit</a> | <a href="del.php?id=<?php echo $id; ?>"
                                                                    onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>

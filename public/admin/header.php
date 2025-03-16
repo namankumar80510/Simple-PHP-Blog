@@ -32,7 +32,7 @@ if (!empty(SITE_ROOT)) {
         <?php
         if (isset($_SESSION['username'])) {
             echo "<a href='" . $url_path . "new.php' class='w3-bar-item w3-btn'>New Post</a>";
-            echo "<a href='" . $url_path . "admin.php' class='w3-bar-item w3-btn'>Admin Panel</a>";
+            echo "<a href='" . $url_path . "index.php' class='w3-bar-item w3-btn'>Admin Panel</a>";
             echo "<a href='" . $url_path . "logout.php' class='w3-bar-item w3-btn'>Logout</a>";
         } else {
             echo "<a href='" . $url_path . "login.php' class='w3-bar-item w3-pale-red' >Login</a>";
