@@ -1,7 +1,6 @@
 <?php
 set_time_limit(0);
 require_once './connect.php';
-require_once './functions.php';
 require_once './security.php';
 
 $slug_sql = "ALTER TABLE `posts` ADD `slug` VARCHAR(255) NULL DEFAULT NULL AFTER `description`;";
