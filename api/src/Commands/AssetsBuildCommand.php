@@ -22,7 +22,7 @@ class AssetsBuildCommand extends Command
 
         $output->writeln("<comment>Assets built</comment>");
 
-        chdir(PUBLIC_DIR . 'dist');
+        chdir(PUBLIC_DIR . 'assets');
 
         // delete index.html
         FileSystem::delete('index.html');
